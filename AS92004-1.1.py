@@ -24,3 +24,23 @@ elif chosen_activity == 3:
 
 if chosen_activity == 1:
     name_of_activity = (f"{chosen_activity[0]}")
+elif chosen_activity == 2:
+    name_of_activity = (f"{chosen_activity[1]}")
+elif chosen_activity == 3:
+    name_of_activity = (f"{chosen_activity[2]}")
+
+#choosing Meal options 
+meal_options = ["Standard", "Vegetarian", "Vegan"]
+print("Choose a Meal")
+print(f"1. {meal_options[0]}")
+print(f"2. {meal_options[1]}")
+print(f"3. {meal_options[2]}")
+print(f"4. {meal_options[3]}")
+meal_option = int(input("Enter the number of your choice meal"))
+
+if meal_option == 1:
+    name_of_meal = (f"{meal_option[0]}")
+elif chosen_activity == 2:
+    name_of_meal = (f"{meal_option[1]}")
+elif chosen_activity == 3:
+    name_of_meal = (f"{meal_option[2]}")
