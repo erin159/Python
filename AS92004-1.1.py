@@ -15,3 +15,12 @@ print(f"2. {chosen_activity[1]}")
 print(f"3. {chosen_activity[2]}")
 chosen_activity = int(input("Enter the number of your chosen activity:")) - 1
 print("Choose one of the activity to do:")
+if chosen_activity == 1:
+    total_fee = 800
+elif chosen_activity == 2:
+    total_fee = 400
+elif chosen_activity == 3:
+    total_fee = 900
+
+if chosen_activity == 1:
+    name_of_activity = (f"{chosen_activity[0]}")
