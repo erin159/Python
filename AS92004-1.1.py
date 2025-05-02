@@ -44,3 +44,13 @@ elif chosen_activity == 2:
     name_of_meal = (f"{meal_option[1]}")
 elif chosen_activity == 3:
     name_of_meal = (f"{meal_option[2]}")
+
+# Asking if you need a shuttle bus to get to the camp 
+while True:
+    final_question = input(f"Do you need a shuttle bus to get to the camp?")
+    final_question = input(f"for the shuttle bus it is an extra $80, are you ok with that?")
+    final_question = final_question.lower ()
+    if final_question == "yes" or final_question == "no" :
+        break
+    else:
+        print("Please enter yes or no")
