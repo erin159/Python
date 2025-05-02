@@ -39,7 +39,7 @@ print(f"2. {meal_options[1]}")
 print(f"3. {meal_options[2]}")
 meal_option = int(input("Enter the number of your choice meal"))
 
-if meal_option == 1:
+if meal_options == 1:
     name_of_meal = "Standard"
 elif chosen_activity == 2:
     name_of_meal = "Vegetarian"
@@ -60,4 +60,16 @@ if final_question == "yes":
 elif final_question == "no":
     total_fee = 0
 
-print(f"")
+print(f"your name is {first_name}, you are {age} years old, the activity you choose was {chosen_activity}, your meal option you choose was  {meal_option}. the total cost is ${total_fee + total_fee}")
+while True:
+    final_decision = input(f"Do you want to proceed with the payment of the ${total_fee} (yes/no): ")
+    if len(final_decision) == 0:
+        print("Invalid input. Please enter yes or no")
+    elif final_decision.lower() in ['yes' , 'y']:
+        print("Payment accepted. Thank you!")
+        exit()
+    elif final_decision.lower() in ['no' , 'n']:
+        print("Payment cancelled.")
+        exit()
+    elif:
+        print("invalid input. Please enter 'yes' or 'no'.")
