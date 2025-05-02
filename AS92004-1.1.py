@@ -22,12 +22,14 @@ elif chosen_activity == 2:
 elif chosen_activity == 3:
     total_fee = 900
 
+
 if chosen_activity == 1:
-    name_of_activity = (f"{chosen_activity[0]}")
+    name_of_activity = "Cultural Immersion (5 days, easy, $800 fee)"
 elif chosen_activity == 2:
-    name_of_activity = (f"{chosen_activity[1]}")
+    name_of_activity = "Kayaking and Pancake (3 days, moderate, $400 fee)"
 elif chosen_activity == 3:
-    name_of_activity = (f"{chosen_activity[2]}")
+    name_of_activity = "Mountain biking (4 Days, difficult, $900 fee)"
+
 
 #choosing Meal options 
 meal_options = ["Standard", "Vegetarian", "Vegan"]
@@ -35,15 +37,14 @@ print("Choose a Meal")
 print(f"1. {meal_options[0]}")
 print(f"2. {meal_options[1]}")
 print(f"3. {meal_options[2]}")
-print(f"4. {meal_options[3]}")
 meal_option = int(input("Enter the number of your choice meal"))
 
 if meal_option == 1:
-    name_of_meal = (f"{meal_option[0]}")
+    name_of_meal = "Standard"
 elif chosen_activity == 2:
-    name_of_meal = (f"{meal_option[1]}")
+    name_of_meal = "Vegetarian"
 elif chosen_activity == 3:
-    name_of_meal = (f"{meal_option[2]}")
+    name_of_meal = "Vegan"
 
 # Asking if you need a shuttle bus to get to the camp 
 while True:
@@ -54,3 +55,9 @@ while True:
         break
     else:
         print("Please enter yes or no")
+if final_question == "yes":
+    total_fee = 80
+elif final_question == "no":
+    total_fee = 0
+
+print(f"")
