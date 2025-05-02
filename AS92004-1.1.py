@@ -60,7 +60,7 @@ if final_question == "yes":
 elif final_question == "no":
     total_fee = 0
 
-print(f"your name is {first_name}, you are {age} years old, the activity you choose was {chosen_activity}, your meal option you choose was  {meal_option}. the total cost is ${total_fee + total_fee}")
+print(f"your name is {first_name}, you are {age} years old, the activity you choose was {chosen_activity}, your meal option you choose was  {meal_option}. the total cost is ${total_fee + total_fee}: ")
 while True:
     final_decision = input(f"Do you want to proceed with the payment of the ${total_fee} (yes/no): ")
     if len(final_decision) == 0:
