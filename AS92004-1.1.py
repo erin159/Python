@@ -1,10 +1,15 @@
+min_age = 5
+max_age = 17
+
+
+
 # First name and age
-first_name =input("What is you full name?")
+camper_name =input("What is you full name?")
 age = int(input("How old are you?"))
 #if age is between 5 and 17 you can do it but if younger or older then that you are too older or young to do it
-if age < 5:
+if age < min_age:
     print("Sorry you are to young to join the camp")
-if age > 17:
+if age > max_age:
     print("Sorry you are to old to join the camp")
 
 # Choosing a activity to do
@@ -60,7 +65,7 @@ if final_question == "yes":
 elif final_question == "no":
     total_fee = 0
 
-print(f"your name is {first_name}, you are {age} years old, the activity you choose was {chosen_activity}, your meal option you choose was  {meal_option}. the total cost is ${total_fee + total_fee}: ")
+print(f"your name is {camper_name}, you are {age} years old, the activity you choose was {chosen_activity}, your meal option you choose was  {meal_option}. the total cost is ${total_fee + total_fee}: ")
 while True:
     final_decision = input(f"Do you want to proceed with the payment of the ${total_fee} (yes/no): ")
     if len(final_decision) == 0:
@@ -71,5 +76,3 @@ while True:
     elif final_decision.lower() in ['no' , 'n']:
         print("Payment cancelled.")
         exit()
-    elif:
-        print("invalid input. Please enter 'yes' or 'no'.")
