@@ -1,8 +1,6 @@
 min_age = 5
 max_age = 17
 
-
-
 # First name and age
 camper_name =input("What is you full name?")
 age = int(input("How old are you?"))
