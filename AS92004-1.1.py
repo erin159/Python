@@ -1,5 +1,6 @@
 min_age = 5
 max_age = 17
+transport_cost = 80
 
 # First name and age
 camper_name =input("What is you full name?")
@@ -19,11 +20,11 @@ print(f"3. {chosen_activity[2]}")
 chosen_activity = int(input("Enter the number of your chosen activity:")) - 1
 print("Choose one of the activity to do:")
 if chosen_activity == 1:
-    total_cost = 800
+    camp_cultural_cost = 800
 elif chosen_activity == 2:
-    total_cost = 400
+    camp_kayaking_cost = 400
 elif chosen_activity == 3:
-    total_cost = 900
+    camp_biking_cost = 900
 
 
 if chosen_activity == 1:
@@ -63,9 +64,19 @@ if final_question == "yes":
 elif final_question == "no":
     total_cost = 0
 
-print(f"your name is {camper_name}, you are {age} years old, the activity you choose was {chosen_activity}, your meal option you choose was  {meal_option}. the total cost is ${total_cost + total_cost}")
+if chosen_activity == 1:
+    print(f"your name is {camper_name}, you are {age} years old, the activity you choose was {chosen_activity}, your meal option you choose was  {meal_option}. the total cost is ${camp_cultural_cost + transport_cost}")
+elif chosen_activity == 2:
+    print(f"your name is {camper_name}, you are {age} years old, the activity you choose was {chosen_activity}, your meal option you choose was  {meal_option}. the total cost is ${camp_kayaking_cost + transport_cost}")
+elif chosen_activity == 3:
+    print(f"your name is {camper_name}, you are {age} years old, the activity you choose was {chosen_activity}, your meal option you choose was  {meal_option}. the total cost is ${camp_biking_cost + transport_cost}")
+
+
+
+
+
 while True:
-    final_decision = input(f"Do you want to proceed with the payment of the ${total_cost + total_cost} (yes/no): ")
+    final_decision = input(f"Do you want to proceed with the payment of the ${total_cost + transport_cost} (yes/no): ")
     if len(final_decision) == 0:
         print("Invalid input. Please enter yes or no")
     elif final_decision.lower() in ['yes' , 'y']:
